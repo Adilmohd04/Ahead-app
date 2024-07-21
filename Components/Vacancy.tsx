@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-// Define the type for the Vacancy item
 interface VacancyItem {
   jobTitle: string;
   position: string;
@@ -33,22 +32,21 @@ const vacancies: VacancyItem[] = [
 
 const Vacancy = () => {
   return (
-    <section className="mt-20 py-8 px-24 h-96">
-   
+    <section className="mt-20 py-8 px-6 lg:px-24">
       <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            variants={{
-              visible: { opacity: 1, scale: 1, x: 0, y: 0 },
-              hidden: { opacity: 0, scale: 0.5, x: "-50%" },
-            }}
-             className="w-full overflow-hidden"
-          >
-            <span className="text-5xl font-bold">Open Vacancies</span>
-          </motion.div>
-      <div className="mt-12 grid grid-cols-3 gap-8">
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        variants={{
+          visible: { opacity: 1, scale: 1, x: 0, y: 0 },
+          hidden: { opacity: 0, scale: 0.5, x: "-50%" },
+        }}
+        className="w-full overflow-hidden"
+      >
+        <span className="text-4xl lg:text-5xl font-bold">Open Vacancies</span>
+      </motion.div>
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {vacancies.map((vac, index) => (
           <VacancyCard key={index} vacancy={vac} />
         ))}
@@ -57,7 +55,6 @@ const Vacancy = () => {
   );
 };
 
-// Define the type for the props of VacancyCard
 interface VacancyCardProps {
   vacancy: VacancyItem;
 }
@@ -74,9 +71,9 @@ const VacancyCard: React.FC<VacancyCardProps> = ({ vacancy }) => {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className="bg-[#fefbec] rounded-lg hover:bg-[#ece7d1] cursor-pointer"
     >
-      <div className="p-6 px-12 rounded-2xl">
-        <h2 className="text-xl font-bold">{vacancy.jobTitle}</h2>
-        <ul className="mt-4 text-sm font-semibold list-disc pl-4">
+      <div className="p-6 rounded-2xl">
+        <h2 className="text-lg lg:text-xl font-bold">{vacancy.jobTitle}</h2>
+        <ul className="mt-4 text-sm lg:text-base font-semibold list-disc pl-4">
           <li>{vacancy.position}</li>
           <li>{vacancy.location}</li>
           <li>{vacancy.pay}</li>

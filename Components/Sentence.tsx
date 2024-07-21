@@ -13,7 +13,7 @@ const Sentence = () => {
         </div>
         <div className="text-base md:text-xl font-normal p-4">
           They are more successful in their pursuits and make for inspiring
-          leaders. According to science, they earn $29 a year.
+          leaders. According to science, they earn $29k more a year.
         </div>
       </div>
     </section>

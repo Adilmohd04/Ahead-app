@@ -3,12 +3,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="mt-4 border-gray-300 py-12 px-12 border-t">
+    <footer className="mt-4 border-gray-300 py-8 px-4 md:py-12 md:px-12 border-t">
       <div className="flex justify-center mb-4">
         <Image width={60} height={60} alt="ahead logo" src="/ahead-logo.png" />
       </div>
-      <p className="mb-5 text-xl font-bold text-violet-700 text-center">ahead</p>
-      <div className="flex gap-8 items-center justify-center mt-5 font-semibold">
+      <p className="mb-5 text-lg md:text-xl font-bold text-violet-700 text-center">ahead</p>
+      <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center justify-center mt-5 font-semibold">
         <div className="flex items-center space-x-2">
           <div className="bg-green-100 p-2 rounded-full">
             <Image width={15} height={20} alt="location icon" src="/location-svg.svg" />

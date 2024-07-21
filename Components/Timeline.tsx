@@ -22,10 +22,10 @@ const Timeline = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
-    <section className="px-20 mt-10 mb-24">
-      <div className="flex flex-row justify-between items-center">
+    <section className="px-6 lg:px-20 mt-10 mb-24">
+      <div className="flex flex-col lg:flex-row justify-between items-center">
         <motion.div
-          className="inline-block"
+          className="inline-block mb-8 lg:mb-0"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -38,7 +38,7 @@ const Timeline = () => {
           <div className="text-md font-semibold text-black">
             Wrong with self improvement & how we&apos;re fixing it.
           </div>
-          <div className="text-5xl pb-3 font-bold text-black">
+          <div className="text-4xl lg:text-5xl pb-3 font-bold text-black">
             Self-improvement. Ugh.
           </div>
         </motion.div>
@@ -68,14 +68,14 @@ const Timeline = () => {
         </motion.div>
       </div>
 
-      <div className="timeline px-20 pt-14 h-96 overflow-y-scroll">
+      <div className="timeline px-6 lg:px-20 pt-14 h-96 overflow-y-scroll">
         <div className="border-l-2 border-l-violet-300 flex flex-col gap-16">
           <Reveal keyframes={customAnimation}>
             {[...Array(10)].map((_, index) => (
               <div key={index}>
-                <motion.div className="max-w-[40rem] relative align-top pl-8">
+                <motion.div className="max-w-full lg:max-w-[40rem] relative align-top pl-8">
                   <div style={{ left: "-12px" }} className="absolute">🟣</div>
-                  <p className="text-xl font-bold">It&apos;s not easy as 1-2-3.</p>
+                  <p className="text-lg lg:text-xl font-bold">It&apos;s not easy as 1-2-3.</p>
                   <p className="mt-3">
                     The journey may be long but our sessions are quick. We get
                     to the point and tell you what you want to know (and nothing

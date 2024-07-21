@@ -4,14 +4,15 @@ import { motion } from "framer-motion";
 
 const Test = () => {
   return (
-    <section className="mt-20 flex flex-col gap-3 text-center p-8">
-      <p className="text-center font-semibold">We take privacy seriously</p>
-      <p className="font-bold text-3xl">Before you get started</p>
-      <p className="text-xl font-normal">
-        &quot;We won&apos;t share your answers with anyone (and won&apos;t ever tell <br></br> you which friends said what about you)&quot;
+    <section className="mt-20 flex flex-col gap-3 text-center p-4 md:p-8">
+      <p className="text-center font-semibold text-lg md:text-xl">We take privacy seriously</p>
+      <p className="font-bold text-2xl md:text-3xl">Before you get started</p>
+      <p className="text-md md:text-xl font-normal">
+        &quot;We won&apos;t share your answers with anyone (and won&apos;t ever tell <br className="hidden md:inline" />
+        you which friends said what about you)&quot;
       </p>
       <div className="flex flex-row gap-2 items-center justify-center">
-        <p className="font-semibold">
+        <p className="font-semibold text-lg md:text-xl">
           with Love, <b><i>Team Ahead</i></b>
         </p>
       </div>
@@ -28,8 +29,8 @@ const Test = () => {
           transition={{ ease: "easeInOut", duration: 1 }}
           className="pt-3"
           style={{
-            width: "100%", // Adjust the width as needed
-            overflow: "hidden", // Hide overflowing text while sliding
+            width: "100%",
+            overflow: "hidden",
           }}
         >
           <button className="rounded-3xl p-3 px-6 text-white bg-black font-semibold">

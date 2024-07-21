@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <div className="fixed top-0 left-0 bg-white z-50 w-full">
       <header className="flex flex-col md:flex-row justify-between items-center py-3 px-4 md:px-8 lg:px-32 w-full">
-        <div className="flex items-center mr-4"> {/* Added margin-right */}
+        <div className="flex items-center mb-3 md:mb-0"> {/* Added margin-bottom for small screens */}
           <Image width={50} height={50} alt="Ahead Logo" src="/ahead-logo.png" />
         </div>
         <div className="flex-1">
